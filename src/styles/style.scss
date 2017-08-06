@@ -5,6 +5,11 @@
 @import "lib/community";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i);
 
+* {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	font-family: "yu gothic", sans-serif;
 	font-family: "Open Sans", sans-serif;
@@ -20,7 +25,7 @@ body {
 	background-color: #ff0033;
 }
 
- //@keyframes color_up {
- //   0%{background-color: rgba(255,255,255,0);}
- //   100%{background-color: rgba(255,255,255,0.4);}
-//}
+#bodymovin {
+	height: 98vh;
+	margin: 0 auto;
+}
