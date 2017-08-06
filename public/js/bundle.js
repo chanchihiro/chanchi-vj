@@ -10265,41 +10265,48 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //こっからッスタート
 
 window.onload = function () {
-  console.log("始まるよ");
-  //一つめのデータ
-  var animData = {
-    wrapper: document.getElementById('bodymovin'),
-    animType: 'svg',
-    loop: false,
-    prerender: true,
-    autoplay: true,
-    path: '../json/vj1.json'
+	console.log("始まるよ");
+	//一つめのデータ
+	var animData = {
+		wrapper: document.getElementById('bodymovin'),
+		animType: 'svg',
+		loop: false,
+		prerender: true,
+		autoplay: true,
+		path: '../json/vj1.json'
 
-    //キー押した時のイベント
-  };(0, _jquery2.default)("html").keydown(function (e) {
-    switch (e.which) {
-      case 65:
-        // Key[→]
-        var anim = bodymovin.loadAnimation(animData);
-        (0, _jquery2.default)("#bodymovin").empty();
-        break;
+		//音のイベントを追加する
+	};function sound() {
+		document.getElementById("sound").currentTime = 0;
+		document.getElementById("sound").play();
+	}
 
-      case 66:
-        // Key[←]
-        console.log("b");
-        break;
+	//キー押した時のイベント
+	(0, _jquery2.default)("html").keydown(function (e) {
+		switch (e.which) {
+			case 65:
+				// Key[→]
+				sound();
+				var anim = bodymovin.loadAnimation(animData);
+				(0, _jquery2.default)("#bodymovin").empty();
+				break;
 
-      case 67:
-        // Key[↑]
-        console.log("c");
-        break;
+			case 66:
+				// Key[←]
+				console.log("b");
+				break;
 
-      case 68:
-        // Key[↓]
-        console.log("d");
-        break;
-    }
-  });
+			case 67:
+				// Key[↑]
+				console.log("c");
+				break;
+
+			case 68:
+				// Key[↓]
+				console.log("d");
+				break;
+		}
+	});
 };
 
 },{"jquery":1}]},{},[2]);

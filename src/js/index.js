@@ -13,10 +13,17 @@ window.onload = function() {
 		path: '../json/vj1.json'
 	}
 
+	//音のイベントを追加する
+	function sound(){
+		document.getElementById("sound").currentTime = 0 ;
+		document.getElementById("sound").play() ;
+	}
+
 	//キー押した時のイベント
 	$("html").keydown(function(e){
 		switch(e.which){
             case 65: // Key[→]
+            sound();
             let anim = bodymovin.loadAnimation(animData);
             $("#bodymovin").empty();
             break;
