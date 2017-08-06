@@ -10270,7 +10270,7 @@ window.onload = function () {
   var animData = {
     wrapper: document.getElementById('bodymovin'),
     animType: 'svg',
-    loop: true,
+    loop: false,
     prerender: true,
     autoplay: true,
     path: '../json/vj1.json'
@@ -10280,7 +10280,8 @@ window.onload = function () {
     switch (e.which) {
       case 65:
         // Key[→]
-        console.log("a");
+        var anim = bodymovin.loadAnimation(animData);
+        (0, _jquery2.default)("#bodymovin").empty();
         break;
 
       case 66:
@@ -10298,7 +10299,6 @@ window.onload = function () {
         console.log("d");
         break;
     }
-    // let anim = bodymovin.loadAnimation(animData);
   });
 };
 

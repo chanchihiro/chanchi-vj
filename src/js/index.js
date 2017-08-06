@@ -7,7 +7,7 @@ window.onload = function() {
 	let animData = {
 		wrapper: document.getElementById('bodymovin'),
 		animType: 'svg',
-		loop: true,
+		loop: false,
 		prerender: true,
 		autoplay: true,
 		path: '../json/vj1.json'
@@ -17,7 +17,8 @@ window.onload = function() {
 	$("html").keydown(function(e){
 		switch(e.which){
             case 65: // Key[→]
-            console.log("a");
+            let anim = bodymovin.loadAnimation(animData);
+            $("#bodymovin").empty();
             break;
  
             case 66: // Key[←]
@@ -32,6 +33,5 @@ window.onload = function() {
             console.log("d");
             break;
         }
-		// let anim = bodymovin.loadAnimation(animData);
 	});
 }
