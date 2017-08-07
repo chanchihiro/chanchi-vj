@@ -20,6 +20,14 @@ window.onload = function() {
 		autoplay: true,
 		path: '../json/vj2.json'
 	}
+	let animData3 = {
+		wrapper: document.getElementById('bodymovin3'),
+		animType: 'svg',
+		loop: false,
+		prerender: true,
+		autoplay: true,
+		path: '../json/vj3.json'
+	}
 
 	//音のイベントを追加する
 	function sound(){
@@ -30,24 +38,30 @@ window.onload = function() {
 		document.getElementById("sound2").currentTime = 0 ;
 		document.getElementById("sound2").play() ;
 	}
+	function sound3(){
+		document.getElementById("sound3").currentTime = 0 ;
+		document.getElementById("sound3").play() ;
+	}
 
 	//キー押した時のイベント
 	$("html").keydown(function(e){
 		switch(e.which){
-            case 65: // Key[→]
+            case 65:
             sound();
             let anim2 = bodymovin.loadAnimation(animData);
             $("#bodymovin").empty();
             break;
  
-            case 66: // Key[←]
+            case 66:
             sound2();
             let anim = bodymovin.loadAnimation(animData2);
             $("#bodymovin2").empty();
             break;
  
-            case 67: // Key[↑]
-            console.log("c");
+            case 67:
+            sound3();
+            let anim3 = bodymovin.loadAnimation(animData3);
+            $("#bodymovin3").empty();
             break;
  
             case 68: // Key[↓]
