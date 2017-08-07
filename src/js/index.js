@@ -26,6 +26,10 @@ window.onload = function() {
 		document.getElementById("sound").currentTime = 0 ;
 		document.getElementById("sound").play() ;
 	}
+	function sound2(){
+		document.getElementById("sound2").currentTime = 0 ;
+		document.getElementById("sound2").play() ;
+	}
 
 	//キー押した時のイベント
 	$("html").keydown(function(e){
@@ -37,7 +41,7 @@ window.onload = function() {
             break;
  
             case 66: // Key[←]
-            console.log("b");
+            sound2();
             let anim = bodymovin.loadAnimation(animData2);
             $("#bodymovin2").empty();
             break;

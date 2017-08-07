@@ -10288,6 +10288,10 @@ window.onload = function () {
 		document.getElementById("sound").currentTime = 0;
 		document.getElementById("sound").play();
 	}
+	function sound2() {
+		document.getElementById("sound2").currentTime = 0;
+		document.getElementById("sound2").play();
+	}
 
 	//キー押した時のイベント
 	(0, _jquery2.default)("html").keydown(function (e) {
@@ -10301,7 +10305,7 @@ window.onload = function () {
 
 			case 66:
 				// Key[←]
-				console.log("b");
+				sound2();
 				var anim = bodymovin.loadAnimation(animData2);
 				(0, _jquery2.default)("#bodymovin2").empty();
 				break;
