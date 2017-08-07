@@ -10274,6 +10274,14 @@ window.onload = function () {
 		prerender: true,
 		autoplay: true,
 		path: '../json/vj1.json'
+	};
+	var animData2 = {
+		wrapper: document.getElementById('bodymovin2'),
+		animType: 'svg',
+		loop: false,
+		prerender: true,
+		autoplay: true,
+		path: '../json/vj2.json'
 
 		//音のイベントを追加する
 	};function sound() {
@@ -10287,13 +10295,15 @@ window.onload = function () {
 			case 65:
 				// Key[→]
 				sound();
-				var anim = bodymovin.loadAnimation(animData);
+				var anim2 = bodymovin.loadAnimation(animData);
 				(0, _jquery2.default)("#bodymovin").empty();
 				break;
 
 			case 66:
 				// Key[←]
 				console.log("b");
+				var anim = bodymovin.loadAnimation(animData2);
+				(0, _jquery2.default)("#bodymovin2").empty();
 				break;
 
 			case 67:

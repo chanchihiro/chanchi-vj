@@ -12,6 +12,14 @@ window.onload = function() {
 		autoplay: true,
 		path: '../json/vj1.json'
 	}
+	let animData2 = {
+		wrapper: document.getElementById('bodymovin2'),
+		animType: 'svg',
+		loop: false,
+		prerender: true,
+		autoplay: true,
+		path: '../json/vj2.json'
+	}
 
 	//音のイベントを追加する
 	function sound(){
@@ -24,12 +32,14 @@ window.onload = function() {
 		switch(e.which){
             case 65: // Key[→]
             sound();
-            let anim = bodymovin.loadAnimation(animData);
+            let anim2 = bodymovin.loadAnimation(animData);
             $("#bodymovin").empty();
             break;
  
             case 66: // Key[←]
             console.log("b");
+            let anim = bodymovin.loadAnimation(animData2);
+            $("#bodymovin2").empty();
             break;
  
             case 67: // Key[↑]

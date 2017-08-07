@@ -185,6 +185,11 @@ body {
 ::-moz-selection {
   background-color: #ff0033; }
 
-#bodymovin {
+.field {
   height: 98vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden; }
