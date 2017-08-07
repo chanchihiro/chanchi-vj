@@ -28,6 +28,14 @@ window.onload = function() {
 		autoplay: true,
 		path: '../json/vj3.json'
 	}
+	let animData4 = {
+		wrapper: document.getElementById('bodymovin4'),
+		animType: 'svg',
+		loop: false,
+		prerender: true,
+		autoplay: true,
+		path: '../json/vj4.json'
+	}
 
 	//音のイベントを追加する
 	function sound(){
@@ -41,6 +49,10 @@ window.onload = function() {
 	function sound3(){
 		document.getElementById("sound3").currentTime = 0 ;
 		document.getElementById("sound3").play() ;
+	}
+	function sound4(){
+		document.getElementById("sound4").currentTime = 0 ;
+		document.getElementById("sound4").play() ;
 	}
 
 	//キー押した時のイベント
@@ -65,7 +77,9 @@ window.onload = function() {
             break;
  
             case 68: // Key[↓]
-            console.log("d");
+            sound4();
+            let anim4 = bodymovin.loadAnimation(animData4);
+            $("#bodymovin4").empty();
             break;
         }
 	});

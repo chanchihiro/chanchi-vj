@@ -10290,6 +10290,14 @@ window.onload = function () {
 		prerender: true,
 		autoplay: true,
 		path: '../json/vj3.json'
+	};
+	var animData4 = {
+		wrapper: document.getElementById('bodymovin4'),
+		animType: 'svg',
+		loop: false,
+		prerender: true,
+		autoplay: true,
+		path: '../json/vj4.json'
 
 		//音のイベントを追加する
 	};function sound() {
@@ -10303,6 +10311,10 @@ window.onload = function () {
 	function sound3() {
 		document.getElementById("sound3").currentTime = 0;
 		document.getElementById("sound3").play();
+	}
+	function sound4() {
+		document.getElementById("sound4").currentTime = 0;
+		document.getElementById("sound4").play();
 	}
 
 	//キー押した時のイベント
@@ -10328,7 +10340,9 @@ window.onload = function () {
 
 			case 68:
 				// Key[↓]
-				console.log("d");
+				sound4();
+				var anim4 = bodymovin.loadAnimation(animData4);
+				(0, _jquery2.default)("#bodymovin4").empty();
 				break;
 		}
 	});
